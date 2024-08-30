@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PortFolio</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://kit.fontawesome.com/348e255fc6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+	<div class="container">
+	<nav>	
+    <div class="logo-container">
+	<b><h1 id="logo">A</h1></b>
+	<b><h1 id="logo2">afreen.</h1></b>
+     </div>
+			<ul>
+				<li> <a href="#">Home</a></li>
+				<li> <a href="#">About</a></li>
+				<li> <a href="#">Services</a></li>
+				<li> <a href="#">Portfolio</a></li>
+				<li> <a href="#">Contact</a></li>
+			</ul>
+		</nav>
+		<div class="header-decor">
+			<p>Computer Scientist</p>
+			<h1>Hello, I'm<span> Aafreen</span> Mughal<br> from Pakistan.
+	</div>
+</div>
+<!-- ABOUT -->
+<div id="about">
+	<div class="container">
+		<div class="row">
+			<div class="col1"> 
+				<img src="image.png" alt="Profile Picture"> <!-- Added alt attribute -->
+			</div>
+			<div class="col2">
+				<h1 id="textt">About me</h1>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+				<div class="skillls">
+					<p class="tab1 active-link" onclick="opentab('skills')">Skills</p>
+					<p class="tab1" onclick="opentab('experience')"> Experience</p>
+					<p class="tab1" onclick="opentab('education')"> Education</p>
+				</div>
+				<div class="tab-contents active-tab" id="skills">
+					<ul>
+						<li><span>UI/UX</span><br>Designing web/App interfaces</li>
+						<li><span>Web development</span><br>Web app Developments</li>
+						<li><span>App developer</span><br>Building Android/iOS apps</li>
+					</ul>
+				</div>
+				<div class="tab-contents" id="experience">
+					<ul>
+						<li><span>2021-2022</span><br>Graphic Designer at Folio3</li>
+						<li><span>2022-2023</span><br>Web developer at GrowIntern</li>
+						<li><span>2023-Current</span><br>App developer at Trango Tech</li>
+					</ul>
+				</div>
+				<div class="tab-contents" id="education">
+					<ul>
+						<li><span>2020-2024</span><br>Bachelor's degree in Computer Science</li>
+						<li><span>2025-2027</span><br>Masters in Data Science</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--SERVICES-->
+<div class="services">
+	<div class='container'>
+		<h1 id="ServicesTitle">My Services</h1>
+		<div class="services-list">
+			<div>
+				<i class="fa-solid fa-magnifying-glass-chart" class="icons"></i>
+				<h2>Application analyst</h2>
+			<p>My expertise lies in analyzing business requirements, designing and implementing effective software solutions, and troubleshooting issues to ensure seamless performance. I have a proven track record of collaborating with cross-functional teams to deliver projects on time and within scope, all while maintaining a focus on user satisfaction and system efficiency.</p>
+			<a href="#">Learn more...</a>
+		    </div>
+			<div>
+				<i class="fa-brands fa-app-store-ios" class="icons"></i>
+			<h2>Application Developer</h2>
+			<p>My expertise spans across the full development lifecycle, from initial concept through to deployment and maintenance. I thrive on solving complex problems and delivering solutions that drive efficiency and enhance user experiences.</p>
+		    <a href="#">Learn more...</a>
+		 </div>
+			<div>
+				<i class="fa-solid fa-code" class="icons"></i>
+			<h2>Web Designer</h2>
+			 <p>My approach combines creativity with strategy, ensuring that every project reflects the unique essence of my clients' brands while meeting their specific goals. From sleek, modern designs to intricate, bespoke solutions, I thrive on transforming ideas into beautiful, interactive websites that leave a lasting impression.</p>
+			 <a href="#">Learn more...</a>
+			</div>
+		</div>
+		</div>
+	</div>
+<!--MY WORK-->
+<div class="PortFolio">
+	<div class="container">
+		<h1 class="heading">My Work</h1>
+			<div class="images">
+				<div class="work">
+					<img src="imaaa.jpeg">
+					<div class="textt">
+						<h3>Mobile App</h3>
+						<p>It is a software application developed specifically for use on small, wireless computing devices, such as smartphones and tablets, rather than desktop or laptop computers.</p>
+						<a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+					</div>
+				</div>
+				<div class="work">
+					<img src="web.png">
+					<div class="textt">
+						<h3>Login system</h3>
+						<p>It is a software application developed specifically for use on small, wireless computing devices, such as smartphones and tablets, rather than desktop or laptop computers.</p>
+						<a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+					</div>
+				</div>
+				<div class="work">
+					<img src="web2.png">
+					<div class="textt">
+						<h3>Web Portal</h3>
+						<p>It is a software application developed specifically for use on small, wireless computing devices, such as smartphones and tablets, rather than desktop or laptop computers.</p>
+						<a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+					</div>
+				</div>
+			</div>
+	</div>
+
+</div>
+<script>
+	var tablink = document.getElementsByClassName('tab1');
+	var tabcontent = document.getElementsByClassName('tab-contents');
+
+	function opentab(tabname) {
+		for (let tablinks of tablink) {
+			tablinks.classList.remove('active-link');
+		}
+		for (let tabcontents of tabcontent) {
+			tabcontents.classList.remove('active-tab');
+		}
+		event.currentTarget.classList.add('active-link');
+		document.getElementById(tabname).classList.add('active-tab');
+	}
+</script>
+</body>
+</html>

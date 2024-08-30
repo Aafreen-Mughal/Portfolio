@@ -1,0 +1,245 @@
+*{
+	
+	margin: 0;
+	padding:0 ;
+	box-sizing: border-box;
+}
+body{
+background: black;
+color: white;	
+}
+#header{
+	height: 100vh;
+	width: 100%;
+	background-image:url(imagee.png);
+	margin-top: 10px;
+	 background-size: 700px;
+	background-position: right center; /* Adjusts the image to the right side */
+	background-repeat: no-repeat; /* Ensures the image doesn't repeat */
+}
+.container{
+padding: 10px 10%;
+}
+.logo-container {
+	display: flex; /* Aligns the children in a row */
+	/*align-items: center;  Vertically centers the text */
+}
+
+.logo-container h1 {
+	display: inline-block; /* Ensures the h1 elements stay in line */
+	margin: 0; /* Removes default margin */
+}
+#logo{
+color: red;
+font-size: 40px;
+}
+#logo2{
+color: white;
+font-size: 40px;
+}
+nav{
+	display:flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+nav ul li{
+	font-family: sens-serif;
+	display: inline-block;
+	list-style: none;
+	margin: 10px 20px;
+
+}
+nav ul li a{
+	color: white;
+	text-decoration:none;
+	font-size:15px;
+	position:relative;}
+
+nav ul li a::after{
+		content:'';
+		width:0;
+		height:3px;
+		background: #ff004f;
+		position:absolute;
+		left:0;
+		bottom:-6px;
+		transition: 1s;
+	}
+nav ul li a:hover::after{
+	width:100%;
+	text-decoration: underline;
+	color: red;
+}
+.header-decor{
+	margin-top: 20%;
+	font-size:30px;
+}
+.header-decor h1{
+	margin-top:20px;
+	font-size:50px;
+}
+.header-decor h1 span{
+	color: red;
+}
+#about{
+	padding: 220px 0px;
+	color: #ababab;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.col1{
+	flex-basis: 40%;
+}
+.col1 img{
+	width:130%;
+	height:100%;
+}
+.col2{
+	flex-basis: 60%;
+}
+#textt{
+	font-size: 40px;
+	font-weight: 600;
+	color:white;
+}
+.skillls{
+	display: flex;
+	margin: 20px 0 40px;
+}
+.tab1{
+	margin-right: 50px;
+	font-size: 18px;
+	font-weight: 500;
+	cursor: pointer;
+	position: relative;
+}
+.tab1::after{
+	   content:'';
+		width:0;
+		height:3px;
+		background: #ff004f;
+		position:absolute;
+		left:0;
+		bottom:-6px;
+		transition: 1s;
+}
+.tab1.active-link:hover::after{
+	width:100%;
+	text-decoration: underline;
+	color: red;
+}
+.tab-contents ul li{
+	list-style: none;
+	margin: 10px 0px;
+}
+.tab-contents ul li span{
+	color: #b54769;
+	font-size: 14px;
+}
+.tab-contents{
+	DISPLAY: NONE;
+}
+.tab-contents.active-tab{
+	display: block;
+}
+.services{
+	padding: 30px 0;
+}
+.services-list{
+	display:grid;
+	grid-gap: 40px;
+	margin-top: 50px;
+	grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+.services-list div{
+	padding:40px;
+	background: #262626;
+	font-size: 14px;
+	border-radius: 10px;
+	transition: background 0.5s,transform 0.5s;
+}
+.services-list div i{
+	font-size: 40px;
+	margin-bottom: 10px;
+}
+.services-list div h2{
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+.services-list div a{
+	font-size: 12px;
+	text-decoration: none;
+	color:#fff;
+	display: inline-block;
+}
+.services-list div:hover{
+	background: purple;
+	transform: translateY(-10px);
+}
+.PortFolio {
+    padding: 50px 0;
+}
+
+.images {
+    display: grid;
+    grid-gap: 40px;
+    margin-top: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.work {
+    border-radius: 10px;
+    position: relative; /* Ensure .textt is positioned relative to this */
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.textt {
+
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), purple);
+    border-radius: 10px;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    transition: height 0.5s;
+}
+.textt h3{
+	margin: 20px;
+	font-weight: 200;
+}
+.textt a{
+	margin-top: 20px;
+	color: purple;
+	font-size: 17px;
+	text-decoration: none;
+	width: 60px;
+	height:60px;
+	background: whitesmoke;
+	border-radius: 50px;
+	text-align: center;
+	line-height: 60px;
+}
+.work:hover img{
+	transform: scale(1.1);
+}
+.work:hover .textt{
+	height:100%;
+}
